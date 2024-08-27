@@ -44,6 +44,7 @@ clean:		## Removes build files
 deps:		## Installs dependencies.
 	if [ ! -d deps/simple-test ]; then \
 		git submodule add https://github.com/ethanuppal/simple-test deps/simple-test; \
+		git submodule update --init --recursive --remote deps/simple-test; \
 	fi
 	git submodule update --recursive --remote
 	$(INSTNASM)

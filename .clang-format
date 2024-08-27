@@ -1,0 +1,35 @@
+# Copyright (C) 2024 Ethan Uppal. All rights reserved.
+---
+BasedOnStyle: Google
+IndentWidth: 4
+Language: Cpp
+UseTab: Never
+DerivePointerAlignment: false
+PointerAlignment: Left
+BreakStringLiterals: true
+ReflowComments: true
+ContinuationIndentWidth: 4
+ColumnLimit: 80
+AlignAfterOpenBracket: DontAlign
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 2
+AlignOperands: Align
+BreakBeforeBinaryOperators: NonAssignment
+PenaltyBreakAssignment: 60
+PenaltyBreakOpenParenthesis: 50
+IndentCaseLabels: true
+AllowShortFunctionsOnASingleLine: Empty
+SortIncludes: Never
+MacroBlockBegin: "^#if(def)? .*$"
+MacroBlockEnd: "^#endif$"
+AlignEscapedNewlines: Right
+IndentAccessModifiers: false
+AccessModifierOffset: -4
+SpaceBeforeRangeBasedForLoopColon: false
+SpaceBeforeCaseColon: false
+SpaceBeforeCtorInitializerColon: false
+SpaceAfterTemplateKeyword: false
+BitFieldColonSpacing: After
+---
+

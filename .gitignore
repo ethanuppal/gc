@@ -1,0 +1,6 @@
+# Copyright (C) 2024 Ethan Uppal. All rights reserved.
+
+*._DS_Store
+*.DS_Store
+*.so
+*.o

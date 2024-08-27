@@ -18,6 +18,7 @@ ifeq ($(shell uname), Darwin)
 AR 			:= /usr/bin/libtool
 ARFL 		:= -static
 NASMFL		:= -f macho64
+INSTNASM	:= brew install nasm
 else
 AR 			:= ar
 ARFL 		:= rcs $@ $^
@@ -45,6 +46,7 @@ deps:		## Installs dependencies.
 		git submodule add https://github.com/ethanuppal/simple-test deps/simple-test; \
 	fi
 	git submodule update --recursive --remote
+	$(INSTNASM)
 
 .PHONY: test
 test: build		## Runs tests

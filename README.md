@@ -17,8 +17,3 @@ Run `make help` for usage information.
 ## Testing
 
 Tests are under [`test/`](./test/).
-
-## CI
-
-`make test` will install dependencies if they are missing, so the [CI](./.github/workflows/ci.yaml) need only
-run that command.

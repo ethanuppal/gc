@@ -38,7 +38,7 @@ build: deps	## Builds the static library.
 
 .PHONY: clean
 clean:		## Removes build files
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BUILT_LIB)
 
 .PHONY: deps
 deps:		## Installs dependencies.
@@ -50,7 +50,7 @@ deps:		## Installs dependencies.
 	$(INSTNASM)
 
 .PHONY: test
-test: build		## Runs tests
+test:		## Runs tests
 	@make _test
 
 # https://stackoverflow.com/questions/8889035/how-to-document-a-makefile

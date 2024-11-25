@@ -5,7 +5,7 @@
 #include <string.h>
 
 void test_main(void) {
-    struct gc* gc = gc_create();
+    struct gc* gc = gc_begin();
     assert_true(!!gc);
     char* str = gc_alloc(gc, 40);
     strcpy(str, "foo");

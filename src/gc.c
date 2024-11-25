@@ -1,5 +1,6 @@
 // Copyright (C) 2024 Ethan Uppal. All rights reserved.
 
+#include <stdio.h>
 #define GC_PRIVATE
 #include "gc.h"
 #undef GC_PRIVATE
@@ -31,13 +32,15 @@ void* gc_malloc_object(struct gc* gc, size_t size) {
     return result;
 }
 
-struct gc* gc_create(void) {
+struct gc* gc_begin(void) {
     struct gc* gc = malloc(sizeof(*gc));
     if (!gc) {
         return NULL;
     }
 
     gc->objects = NULL;
+
+    printf("%llu %llu\n", get_rbp(), get_rsp());
 
 #ifdef GC_STATS
     gc->stats.object_bytes = 0;

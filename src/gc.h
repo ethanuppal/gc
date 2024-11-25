@@ -8,7 +8,7 @@
 
 struct gc;
 
-struct gc* gc_create(void);
+struct gc* gc_begin(void);
 
 void* gc_alloc(struct gc* gc, size_t size);
 
@@ -48,6 +48,9 @@ struct gc {
     struct gc_stats stats;
 #endif
 };
+
+extern uint64_t get_rbp(void);
+extern uint64_t get_rsp(void);
 
 void gc_collect(struct gc* gc);
 

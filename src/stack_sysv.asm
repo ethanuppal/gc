@@ -7,12 +7,22 @@ section .text
 
 %ifidn %substr(__?OUTPUT_FORMAT?__, 1, 3), elf
 
+global get_rbp
+get_rbp:
+    mov rax, rbp
+    ret
+
 global get_rsp
 get_rsp:
     mov rax, rsp
     ret
 
-    %else
+%else
+
+global _get_rbp
+_get_rbp:
+    mov rax, rbp
+    ret
 
 global _get_rsp
 _get_rsp:
